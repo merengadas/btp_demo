@@ -30,7 +30,27 @@ ar.beforeRequestHandler.use("/myext", (req, res) => {
   }));
 
   res.end(JSON.stringify({
-    decodedJWTToken
+    decodedJWTToken, 
+  }));
+
+});
+
+ar.beforeRequestHandler.use("/myext1", (req, res) => {
+
+  if (!req.user) {
+    res.statusCode = 403;
+    res.end("Missing JWT Token");
+  }
+
+  res.statusCode = 200;
+  let myvar= req.user.token.accessToken;
+
+  console.log(JSON.stringify({
+    myvar
+  }));
+
+  res.end(JSON.stringify({
+    myvar
   }));
 
 });

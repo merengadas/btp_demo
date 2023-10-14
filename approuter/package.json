@@ -2,14 +2,16 @@
   "name": "mydemo",
   "version": "0.0.1",
   "engines": {
-    "node": "12.X"
+    "node": "^18.14.2",
+    "npm": "^9.5.0"
   },
   "scripts": {
-    "start": "node userinfo",
+    "start": "node userinfo.js",
     "startoriginal": "node node_modules/@sap/approuter/approuter.js"
   },
   "dependencies": {
     "@sap/approuter": "^7.1.0",
+    "install": "^0.13.0",
     "jwt-decode": "^2.2.0"
   }
 }

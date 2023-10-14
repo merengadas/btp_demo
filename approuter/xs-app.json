@@ -8,7 +8,7 @@
     {
       "source": "^/V2/(.*)$",
       "authenticationType": "none",
-      "destination": "northwind_api",
+      "destination": "*",
       "csrfProtection": false
     }
   ]

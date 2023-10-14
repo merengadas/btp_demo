@@ -1,0 +1,122 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "com.sap.uiauxiliar",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.1",
+      "toolsId": "a122481a-4937-4f5e-9652-6f7628418dca"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "uiauxiliar-display": {
+          "semanticObject": "uiauxiliar",
+          "action": "display",
+          "title": "My Demo Agronegocios Application",
+          "subTitle": "Subtitulo",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.118.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sap.uiauxiliar.i18n.i18n"
+        }
+      },
+      "userModel": {
+				"type": "sap.ui.model.json.JSONModel"
+			}
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.sap.uiauxiliar.view",
+        "controlAggregation": "pages",
+        "controlId": "idApp",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteApp",
+          "pattern": "RouteApp",
+          "target": [
+            "TargetView1"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "idApp",
+          "viewName": "App"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.sap.uiauxiliar.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "idApp"
+    }
+  }
+}

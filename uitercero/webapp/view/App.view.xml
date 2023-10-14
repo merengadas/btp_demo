@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.sap.uitercero.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="idAppTercero" >
+    <pages>
+      <Page id="_IDGenPage1" title="{i18n>title}">
+        <content>
+                           
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

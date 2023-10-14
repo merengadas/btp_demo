@@ -16,10 +16,7 @@
         },
         "payload": {
           "viz": [
-            {
-              "id": "com.sap.mydemo",
-              "vizId": "uimodule-display"
-            }
+           
           ]
         }
       }
@@ -36,10 +33,21 @@
         "payload": {
           "viz": [
             {
-              "id": "com.sap.mydemo",
-              "appId": "com.sap.mydemo",
-              "vizId": "uimodule-display"
+              "id": "com.sap.uianexo",
+              "appId": "com.sap.uianexo",
+              "vizId": "uianexo-display"
+            },
+            {
+              "id": "com.sap.uitercero",
+              "appId": "com.sap.uitercero",
+              "vizId": "uitercero-display"
+            },
+            {
+              "id": "com.sap.uiauxiliar",
+              "appId": "com.sap.uiauxiliar",
+              "vizId": "uiauxiliar-display"
             }
+            
           ]
         }
       }
@@ -59,9 +67,6 @@
               "bootstrapPlugins": {
                 "KeyUserPlugin": {
                   "component": "sap.ushell.plugins.rta"
-                },
-                "PersonalizePlugin": {
-                  "component": "sap.ushell.plugins.rta-personalize"
                 }
               },
               "renderers": {

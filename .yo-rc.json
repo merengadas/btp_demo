@@ -9,7 +9,7 @@
     "newdir": true,
     "namespaceURI": "com/sap",
     "uimodules": [
-      "uimodule"
+      "uianexo"
     ],
     "setupCompleted": true
   }
