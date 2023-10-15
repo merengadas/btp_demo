@@ -1,5 +1,5 @@
 {
-  "xsappname": "mydemo",
+  "xsappname": "mydemo_seguridad",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [
