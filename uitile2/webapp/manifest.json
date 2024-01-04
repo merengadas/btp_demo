@@ -30,6 +30,11 @@
       }
     }
   },
+  "sap.cloud.portal": {
+    "uitile2-display": {
+        "vizType": "nptile2.uitile2"
+    }
+},
   "sap.ui": {
     "technology": "UI5",
     "icons": {

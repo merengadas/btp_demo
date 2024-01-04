@@ -1,7 +1,45 @@
 <mvc:View controllerName="nptile2.uitile2.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    xmlns="sap.m"   
+	xmlns:ui="sap.suite.ui.microchart" 
+	xmlns:core="sap.ui.core"     
+    >
+        <SlideTile id="_IDGenSlideTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" transitionTime="250" displayTime="2500">   
+			<GenericTile 
+                id="kpiTile"
+                press="onPress" 
+                header= "Header"
+                subheader= "Subheader" 
+                frameType="OneByOne">
+                    <tileContent>
+                        <TileContent id="_IDGenTileContent1" footer="Footer">
+                            <content>
+                                <ui:ComparisonMicroChart id="_IDGenComparisonMicroChart1" scale="M">
+                                    <ui:data>
+                                        <ui:ComparisonMicroChartData id="_IDGenComparisonMicroChartData1" title="Title 1" value="33" color="red" />
+                                        <ui:ComparisonMicroChartData id="_IDGenComparisonMicroChartData2" title="Title 1" value="12" color="green" />
+                                        <ui:ComparisonMicroChartData id="_IDGenComparisonMicroChartData3" title="Title 3" value="60" color="yellow" />
+                                    </ui:data>
+                                </ui:ComparisonMicroChart> 
+                            </content>
+                        </TileContent>
+                    </tileContent>
+            </GenericTile>
+            <GenericTile 
+                    id="kpiTile2"
+                    press="onPress" 
+                    header= "Header"
+                    subheader= "Subheader" 
+                    frameType="OneByOne">
+                        <tileContent>
+                            <TileContent id="_IDGenTileContent2" footer="Footer">
+                                <content>
+                                    <Image id="_IDGenImage1" src="https://pbs.twimg.com/profile_images/1134212811054309376/xEuYN0VV_400x400.png" height="100%"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+            </GenericTile>
+            </SlideTile>
+
+
 </mvc:View>

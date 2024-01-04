@@ -11,5 +11,12 @@ sap.ui.define([
             onInit: function () {
 
             }
+
+            // onPress: function (oResult) {
+            //     alert('test');
+            //     var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation");
+            //     oCrossAppNavigator.toExternal({
+            //          target: { semanticObject : "uitile2", action: "display"}});
+            // }
         });
     });

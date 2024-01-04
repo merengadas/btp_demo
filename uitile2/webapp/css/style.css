@@ -1,1 +1,8 @@
 /* Enter your custom styles here */
+.sapUiTinyMarginBegin{
+    margin-left: 0.0rem !important;
+}
+
+.sapUiTinyMarginTop{
+        margin-top: 0.0rem !important;
+}
