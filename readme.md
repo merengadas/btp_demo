@@ -1,5 +1,5 @@
 # mydemo
-Insert the purpose of this project and some intersting infos here
+El proposito es generar tiles de prueba
 14/10
 
 ## Credits
