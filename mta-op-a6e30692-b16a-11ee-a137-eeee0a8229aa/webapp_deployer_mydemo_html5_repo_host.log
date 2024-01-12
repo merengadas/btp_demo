@@ -1,4 +1,0 @@
-#2.0#2024 01 12 16:50:38.780#Z#DEBUG#com.sap.cloud.lm.sl.xs2.a6e30692-b16a-11ee-a137-eeee0a8229aa.webapp_deployer_mydemo_html5_repo_host.startContentDeployTask#
-######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3434###
-[PollDeployContentStatusExecution] [webapp_deployer] [INFO] Application content was successfully uploaded from subaccount { CODE: '1002' }#
-

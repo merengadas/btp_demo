@@ -34,6 +34,10 @@ modules:
     - artifacts:
       - comsapuitercero.zip
       name: comsapuitercero
+      target-path: resources/
+    - artifacts:
+      - html5dinamictile.zip
+      name: html5dinamictile
       target-path: resources/    
 - name: mydemo_launchpad_deployer
   type: com.sap.portal.content
@@ -67,6 +71,16 @@ modules:
 - name: comsapuitercero
   type: html5
   path: uitercero
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: html5dinamictile
+  type: html5
+  path: dinamictile
   build-parameters:
     build-result: dist
     builder: custom

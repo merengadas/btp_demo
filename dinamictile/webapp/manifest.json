@@ -1,0 +1,136 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "html5.dinamictile",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.12.1",
+      "toolsId": "f113cefd-f5f1-46df-8fa6-fb76eb0bd15a"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "dinamictile-display": {
+          "semanticObject": "dinamictile",
+          "action": "display",
+          "title": "Dinamic Tile",
+          "subTitle": "Subtitulo",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "indicatorDataSource": {
+              "dataSource": "mainService",
+              "path":"count",
+              "refresh": 10
+
+          }
+        }
+      }
+    },
+    "dataSources": {
+                     "mainService": {
+                          "uri": "btp_demo.html5.dinamictile/items",
+                          "type": "JSON"          
+                            },
+                     "scopedService":
+                            {
+                            "uri": "items/scopes",
+                            "type": "JSON"          
+                              } 
+                    }        
+  },      
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.4",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "html5.dinamictile.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "html5.dinamictile.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView1"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1",
+          "viewName": "View1"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "html5.dinamictile.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
