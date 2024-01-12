@@ -29,10 +29,7 @@
         }
       }
     }
-  },
-  "sap.flp": {
-    "type":"tile"
-  },
+  }, 
   "sap.ui": {
     "technology": "UI5",
     "icons": {

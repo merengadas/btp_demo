@@ -34,11 +34,7 @@ modules:
     - artifacts:
       - comsapuitercero.zip
       name: comsapuitercero
-      target-path: resources/
-    - artifacts:
-      - nptile2uitile2.zip
-      name: nptile2uitile2
-      target-path: resources/
+      target-path: resources/    
 - name: mydemo_launchpad_deployer
   type: com.sap.portal.content
   path: launchpad
@@ -71,16 +67,6 @@ modules:
 - name: comsapuitercero
   type: html5
   path: uitercero
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build:cf
-    supported-platforms: []
-- name: nptile2uitile2
-  type: html5
-  path: uitile2
   build-parameters:
     build-result: dist
     builder: custom
