@@ -1,41 +1,44 @@
 {
-  "name": "mydemo",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "ui5 serve --config=uianexo/ui5.yaml  --open flpSandbox.html",
-    "build:ui": "run-s  build:uianexo",
-    "test": "run-s lint karma",
-    "karma-ci": "karma start karma-ci.conf.js",
-    "clearCoverage": "shx rm -rf coverage",
-    "karma": "run-s clearCoverage karma-ci",
-    "lint": "eslint .",
-    "build:mta": "mbt build",
-    "deploy:cf": "cross-var cf deploy mta_archives/mydemo_$npm_package_version.mtar",
-    "deploy": "run-s build:mta deploy:cf",
-    "serve:uianexo": "ui5 serve --config=uianexo/ui5.yaml",
-    "build:uianexo": "ui5 build --config=uianexo/ui5.yaml --clean-dest --dest uianexo/dist --include-task=generateManifestBundle"
-  },
-  "devDependencies": {    
-    "@types/oauth": "^0.9.2",
-    "@ui5/cli": "^3.7.0",
-    "cross-var": "^1.1.0",
-    "eslint": "^7.1.0",
-    "karma": "^6.4.2",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage": "^2.0.2",
-    "karma-ui5": "^3.0.3",
-    "mbt": "^1.0.14",
-    "npm-run-all": "^4.1.5",
-    "shx": "^0.3.2",
-    "ui5-middleware-cfdestination": "^3.3.9",
-    "ui5-middleware-livereload": "^0.3.0",
-    "ui5-task-zipper": "^0.3.0"
-  },
-  "ui5": {
-    "dependencies": [
-      "ui5-middleware-livereload",
-      "ui5-middleware-cfdestination",
-      "ui5-task-zipper"
-    ]
-  }
+    "name": "mydemo",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "ui5 serve --config=uianexo/ui5.yaml  --open flpSandbox.html",
+        "build:ui": "run-s  build:uianexo",
+        "test": "run-s lint karma",
+        "karma-ci": "karma start karma-ci.conf.js",
+        "clearCoverage": "shx rm -rf coverage",
+        "karma": "run-s clearCoverage karma-ci",
+        "lint": "eslint .",
+        "build:mta": "mbt build",
+        "deploy:cf": "cross-var cf deploy mta_archives/mydemo_$npm_package_version.mtar",
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+        "serve:uianexo": "ui5 serve --config=uianexo/ui5.yaml",
+        "build:uianexo": "ui5 build --config=uianexo/ui5.yaml --clean-dest --dest uianexo/dist --include-task=generateManifestBundle",
+        "undeploy": "cf undeploy mydemo --delete-services --delete-service-keys --delete-service-brokers",
+        "build": "rimraf resources mta_archives && mbt build --mtar archive"
+    },
+    "devDependencies": {
+        "@types/oauth": "^0.9.2",
+        "@ui5/cli": "^3.7.0",
+        "cross-var": "^1.1.0",
+        "eslint": "^7.1.0",
+        "karma": "^6.4.2",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-coverage": "^2.0.2",
+        "karma-ui5": "^3.0.3",
+        "mbt": "^1.0.14",
+        "npm-run-all": "^4.1.5",
+        "shx": "^0.3.2",
+        "ui5-middleware-cfdestination": "^3.3.9",
+        "ui5-middleware-livereload": "^0.3.0",
+        "ui5-task-zipper": "^0.3.0",
+        "rimraf": "^3.0.2"
+    },
+    "ui5": {
+        "dependencies": [
+            "ui5-middleware-livereload",
+            "ui5-middleware-cfdestination",
+            "ui5-task-zipper"
+        ]
+    }
 }

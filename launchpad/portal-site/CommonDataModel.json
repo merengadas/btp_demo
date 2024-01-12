@@ -46,6 +46,11 @@
               "id": "com.sap.uiauxiliar",
               "appId": "com.sap.uiauxiliar",
               "vizId": "uiauxiliar-display"
+            },
+            {
+              "id": "nptile2.uitile2",
+              "appId": "nptile2.uitile2",
+              "vizId": "uitile2-display"
             }
             
           ]
