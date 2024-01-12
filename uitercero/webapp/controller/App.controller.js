@@ -100,7 +100,8 @@ sap.ui.define([
           //   console.log("ORGANIZACION DE DIOS:");
           //   console.log(json[1].name);
           // });
-
+          
+          //link de AGROBIT
           window.location.replace("https://dekatest.dekagb.com/dkAGRObit_TEST/smartfarm/newdasH");
      
 }

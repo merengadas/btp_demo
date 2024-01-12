@@ -20,7 +20,7 @@
         "uitercero-display": {
           "semanticObject": "uitercero",
           "action": "display",
-          "title": "My Demo Tercero Application",
+          "title": "Agrobit Application",
           "subTitle": "Subtitulo",
           "signature": {
             "parameters": {},
