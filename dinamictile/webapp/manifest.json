@@ -25,27 +25,13 @@
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"
-          },
-          "indicatorDataSource": {
-              "dataSource": "mainService",
-              "path":"count",
-              "refresh": 10
-
           }
+          
+          
         }
       }
-    },
-    "dataSources": {
-                     "mainService": {
-                          "uri": "btp_demo.html5.dinamictile/items",
-                          "type": "JSON"          
-                            },
-                     "scopedService":
-                            {
-                            "uri": "items/scopes",
-                            "type": "JSON"          
-                              } 
-                    }        
+    }
+    
   },      
   "sap.ui": {
     "technology": "UI5",
