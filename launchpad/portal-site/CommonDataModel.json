@@ -48,10 +48,11 @@
               "vizId": "uiauxiliar-display"
             },
             {
-              "id": "html5.dinamictile",
-              "appId": "html5.dinamictile",
-              "vizId": "dinamictile-display"
-            }            
+              "id": "com.sap.uidinamico",
+              "appId": "com.sap.uidinamico",
+              "vizId": "uidinamico-display"
+            }
+                       
           ]
         }
       }

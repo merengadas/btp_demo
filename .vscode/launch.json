@@ -329,6 +329,116 @@
         "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
         "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Mtademo/btp_demo/serverdemo\"}"
       }
+    },
+    {
+      "name": "Start dinamictile",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "cwd": "${workspaceFolder}/dinamictile",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--open",
+        "test/flpSandbox.html#html5dinamictile-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Mtademo/btp_demo/dinamictile\"}"
+      }
+    },
+    {
+      "name": "Start dinamictile Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/dinamictile",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flpSandbox.html#html5dinamictile-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Mtademo/btp_demo/dinamictile\"}"
+      }
+    },
+    {
+      "name": "Start uidinamico",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "cwd": "${workspaceFolder}/uidinamico",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--open",
+        "test/flpSandbox.html#comsapuidinamico-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Mtademo/btp_demo/uidinamico\"}"
+      }
+    },
+    {
+      "name": "Start uidinamico Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/uidinamico",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flpSandbox.html#comsapuidinamico-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/Mtademo/btp_demo/uidinamico\"}"
+      }
     }
   ],
   "compounds": [],
