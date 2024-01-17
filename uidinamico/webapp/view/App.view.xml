@@ -3,5 +3,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <App id="app">
+    <GenericTile id="_IDGenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="US Profit Margin" press="onPress" frameType = "OneByHalf">
+		<TileContent id="_IDGenTileContent1" unit="Unit">
+			<NumericContent id="_IDGenNumericContent1" scale="%" value="12" valueColor="Critical" indicator="Up" withMargin="false" />
+		</TileContent>
+	</GenericTile>
     </App>
 </mvc:View>
