@@ -52,10 +52,12 @@ sap.ui.define([
                 $.ajax({
                   type: "GET",
                   url: "https://www.crcind.com/csp/samples/SOAP.Demo.cls?soap_method=AddInteger&Arg1=1&Arg2=2",
-                  content: "text/xml",
-                  datatype:"xml",
+                  contentType:"text/xml; charset=\"utf-8\"",
+                  dataType:"xml",
                   success: function (data) {
                    
+                    var response = data;
+                    
                     var dataXml= data.responseText;
                     var parser = new DOMParser();
                     var xmlDoc=parser.parseFromString(dataXml, "text/xml");
@@ -66,7 +68,7 @@ sap.ui.define([
 
                    that._oTileModel2 = new sap.ui.model.xml.XMLModel();
                    that._oTileModel2.setData(xmlDoc);  
-                   console.log(data);
+                   console.log(response);
                     
                     that.getView().setModel(that._oTileModel2);
 
