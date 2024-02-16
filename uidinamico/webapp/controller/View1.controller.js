@@ -13,6 +13,7 @@ sap.ui.define([
           
                 var self = this;
                 self.getInfoTile();
+                self.getInfoTile2();
       
               },
               getInfoTile: function () {
@@ -31,17 +32,43 @@ sap.ui.define([
                       info.hora = a[0];
                       info.desc = d;
                     }
-                   // set data model on view
-                    var oData = {
-                      employee: {
-                      name: "John"
-                      }
-                      };
-      
-                    var oModel = new  sap.ui.model.json.JSONModel(oData);
+
+                    that._oTileModel = new sap.ui.model.json.JSONModel([]);
+                    that._oTileModel.setData(info);  
+                   console.log(JSON.stringify(info));
                     
-                    that.getView().setModel(oModel);
+
+                    that.getView().setModel(that._oTileModel);
+
                     
+                  },
+                  error: function (error) {
+                    console.log("Tile: ", error);
+                  }
+                });
+              },
+              getInfoTile2: function () {
+                var that = this;
+                $.ajax({
+                  type: "GET",
+                  url: "https://www.crcind.com/csp/samples/SOAP.Demo.cls?soap_method=AddInteger&Arg1=1&Arg2=2",
+                  content: "text/xml",
+                  datatype:"xml",
+                  success: function (data) {
+                   
+                    var dataXml= data.responseText;
+                    var parser = new DOMParser();
+                    var xmlDoc=parser.parseFromString(dataXml, "text/xml");
+
+                    //responseTotal= xmlDoc.getElementsByTagName("AddIntegerResult")[0].childNodes[0].nodeValue;
+                  //  Messagebox.Show(responseTotal);
+                    
+
+                   that._oTileModel2 = new sap.ui.model.xml.XMLModel();
+                   that._oTileModel2.setData(xmlDoc);  
+                   console.log(data);
+                    
+                    that.getView().setModel(that._oTileModel2);
 
                     
                   },
@@ -51,6 +78,7 @@ sap.ui.define([
                 });
               }
 
-
-        });
-    });
+            });
+          }
+        );
+        

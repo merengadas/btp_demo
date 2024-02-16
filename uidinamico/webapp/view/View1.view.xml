@@ -9,12 +9,41 @@
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart1" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem1" fractionLabel="{employee/name}" fraction="10" color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem1"  fraction="{/hora}"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
 			</TileContent>
 		</tileContent>
 	</GenericTile>
+
+	<GenericTile id="_IDGenGenericTile2" header="Argentina" subheader="Buenos Aires">
+		<tileContent>
+			<TileContent id="_IDGenTileContent2">
+				<content>
+					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart2" showTotal="false" total="12" size="Responsive" totalScale="Hr">
+						<micro:items>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="{/AddIntegerResult}"  color="Good" fractionScale="Hr"/>
+						</micro:items>
+					</micro:HarveyBallMicroChart>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+
+	<GenericTile id="_IDGenGenericTile3" header="Argentina" subheader="Buenos Aires">
+		<tileContent>
+			<TileContent id="_IDGenTileContent3">
+				<content>
+					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart3" showTotal="false" total="12" size="Responsive" totalScale="Hr">
+						<micro:items>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3" fractionLabel="{/desc}" fraction="{/hora}"  color="Good" fractionScale="Hr"/>
+						</micro:items>
+					</micro:HarveyBallMicroChart>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+
     </Page>
 </mvc:View>
