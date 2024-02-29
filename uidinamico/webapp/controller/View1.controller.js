@@ -16,7 +16,16 @@ sap.ui.define([
                 self.getInfoTile();
                 self.getInfoTileLima();
                 self.getInfoTileChicago();
-                self.getInfoTile2();
+
+                let sPayload='<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">' +
+                '<soap:Body>'+
+                  '<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">'+
+                    '<ubiNum>2</ubiNum>' +
+                  '</NumberToWords>'+
+                '</soap:Body>'
+              '</soap:Envelope>'
+
+                self.getInfoTile2(sPayload);
       
               },
               getInfoTile: function () {
@@ -118,13 +127,14 @@ sap.ui.define([
               },
 
 
-              getInfoTile2: function () {
+              getInfoTile2: function (sPayload) {
                 var that = this;
                                 
                 $.ajax({
-                  type: "GET",
-                  url: "v2/northwind/northwind.svc/Employees",
-                  contentType:"text/xml; charset=\"utf-8\"",
+                  type: "POST",
+                  url: "xxx/webservicesserver/numberconversion.wso?op=NumberToWords",
+                  data:sPayload,
+                  contentType:"text/xml",
                   dataType:"xml",
                   success: function (data) {
                                       
@@ -133,7 +143,7 @@ sap.ui.define([
                     var parser = new DOMParser();
                     var xmlDoc=parser.parseFromString(dataXml, "text/xml");
 
-                    let valor= xmlDoc.getElementsByTagName("AddIntegerResult")[0].childNodes[0].nodeValue;
+                    let valor= xmlDoc.getElementsByTagName("NumberToWordsResponse")[0].childNodes[0].nodeValue;
                     console.log(valor) ;
                     
 

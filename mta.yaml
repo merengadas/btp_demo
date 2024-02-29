@@ -128,7 +128,7 @@ resources:
   parameters:
     service: portal
     service-plan: standard
-- name: Northwind
+- name: xxx
   type: org.cloudfoundry.managed-service
   parameters:
     service: destination

@@ -16,6 +16,12 @@
       "target": "$1",
       "authenticationType": "xsuaa",
       "service": "html5-apps-repo-rt"
+    },
+    {
+      "source": "^/webservicesserver/(.*)", 
+      "authenticationType": "none",
+      "destination": "xxx",
+      "csrfProtection": false
     }
    
   ]

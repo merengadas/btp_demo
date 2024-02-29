@@ -26,4 +26,13 @@ server:
       configuration:
         component: com.sap.uidinamico
         ui5Theme: sap_horizon
-   
+        
+    - name: ui5-middleware-cfdestination
+      afterMiddleware: compression
+      configuration:
+        debug: true
+        port: 1091
+        xsappjson: approuter/xs-app.json
+        destination: 
+         -name: "xxx"
+        

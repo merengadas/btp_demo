@@ -20,10 +20,16 @@
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
     },
+    {
+      "source": "^/webservicesserver/(.*)", 
+      "authenticationType": "none",
+      "destination": "xxx",
+      "csrfProtection": false
+    },
     {    
       "authenticationType": "none",
       "csrfProtection": false,
-      "source": "^/v2/(.*)$",
+      "source": "^/v2/(.*)$",   
       "destination": "Northwind",
       "target": "$1"
     }

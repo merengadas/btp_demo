@@ -37,7 +37,7 @@
     "ui5": {
         "dependencies": [
             "ui5-middleware-livereload",
-            "ui5-middleware-cfdestination",
+            "ui5-middleware-cfdestination",            
             "ui5-task-zipper"
         ]
     }
