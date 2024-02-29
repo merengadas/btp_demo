@@ -31,13 +31,13 @@
 		</tileContent>
 	</GenericTile>
 
-	<GenericTile id="_IDGenGenericTile3" header="EEUU" subheader="NY">
+	<GenericTile id="_IDGenGenericTile3" header="EEUU" subheader="Chicago">
 		<tileContent>
 			<TileContent id="_IDGenTileContent3">
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart3" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3"  fraction="{/horaNY}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3"  fraction="{Chicago>/horaChicago}"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>

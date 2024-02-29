@@ -15,6 +15,7 @@ sap.ui.define([
                 //self.getInfoTile();
                 self.getInfoTile();
                 self.getInfoTileLima();
+                self.getInfoTileChicago();
       
               },
               getInfoTile: function () {
@@ -73,6 +74,7 @@ sap.ui.define([
 
                     that.getView().setModel(that._oTileModel2, "lima");
                     
+                    getInfoTileChicago();
                     
                   },
                   error: function (error) {
@@ -80,6 +82,40 @@ sap.ui.define([
                   }
                 });
               },
+
+              getInfoTileChicago: function () {
+                var that = this;
+                $.ajax({
+                  type: "GET",
+                  url: "https://worldtimeapi.org/api/timezone/America/Chicago",
+                  success: function (data) {
+                    var d = data.datetime.split("T")[1].split(".")[0];
+                    var a = d.split(":");
+                    var info = {};
+                    if (Number(a[0]) > 12) {
+                      info.horaChicago = a[0] -= 12;
+                      info.desc = d;
+                    } else {
+                      info.horaChicago = a[0];
+                      info.desc = d;
+                    }
+
+                    that._oTileModel3 = new sap.ui.model.json.JSONModel([]);
+                    that._oTileModel3.setData(info);  
+                   console.log(JSON.stringify(info));
+                    
+
+                    that.getView().setModel(that._oTileModel3, "Chicago");
+                    
+                    getInfoTileChicago();
+                    
+                  },
+                  error: function (error) {
+                    console.log("Tile: ", error);
+                  }
+                });
+              },
+
 
               getInfoTile2: function () {
                 var that = this;
