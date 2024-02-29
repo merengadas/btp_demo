@@ -128,6 +128,11 @@ resources:
   parameters:
     service: portal
     service-plan: standard
+- name: Northwind
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: destination
+    service-plan: lite
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true

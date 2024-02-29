@@ -12,8 +12,9 @@ sap.ui.define([
             onInit: function() {
           
                 var self = this;
+                //self.getInfoTile();
                 self.getInfoTile();
-                self.getInfoTile2();
+                self.getInfoTileLima();
       
               },
               getInfoTile: function () {
@@ -33,13 +34,45 @@ sap.ui.define([
                       info.desc = d;
                     }
 
-                    that._oTileModel = new sap.ui.model.json.JSONModel([]);
-                    that._oTileModel.setData(info);  
+                    that._oTileModel1 = new sap.ui.model.json.JSONModel([]);
+                    that._oTileModel1.setData(info);  
                    console.log(JSON.stringify(info));
                     
 
-                    that.getView().setModel(that._oTileModel);
+                    that.getView().setModel(that._oTileModel1);
 
+                    getInfoTileLima();
+                  },
+                  error: function (error) {
+                    console.log("Tile: ", error);
+                  }
+                });
+              },
+
+              getInfoTileLima: function () {
+                var that = this;
+                $.ajax({
+                  type: "GET",
+                  url: "https://worldtimeapi.org/api/timezone/America/Lima",
+                  success: function (data) {
+                    var d = data.datetime.split("T")[1].split(".")[0];
+                    var a = d.split(":");
+                    var info = {};
+                    if (Number(a[0]) > 12) {
+                      info.horaLima = a[0] -= 12;
+                      info.desc = d;
+                    } else {
+                      info.horaLima = a[0];
+                      info.desc = d;
+                    }
+
+                    that._oTileModel2 = new sap.ui.model.json.JSONModel([]);
+                    that._oTileModel2.setData(info);  
+                   console.log(JSON.stringify(info));
+                    
+
+                    that.getView().setModel(that._oTileModel2, "lima");
+                    
                     
                   },
                   error: function (error) {
@@ -47,15 +80,19 @@ sap.ui.define([
                   }
                 });
               },
+
               getInfoTile2: function () {
                 var that = this;
+                let path = this.getOwnerComponent().getManifestObject()._oBaseUri._parts.path;
+                console.log(path);
                 $.ajax({
                   type: "GET",
-                  url: "https://www.crcind.com/csp/samples/SOAP.Demo.cls?soap_method=AddInteger&Arg1=1&Arg2=2",
+                  url: "v2/northwind/northwind.svc/Employees",
                   contentType:"text/xml; charset=\"utf-8\"",
                   dataType:"xml",
                   success: function (data) {
                    
+                    debugger;
                     var response = data;
                     
                     var dataXml= data.responseText;

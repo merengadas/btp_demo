@@ -34,3 +34,4 @@ server:
       configuration:
         component: com.sap.uidinamico
         ui5Theme: sap_horizon
+    

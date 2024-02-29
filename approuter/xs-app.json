@@ -8,8 +8,15 @@
     {
       "source": "^/V2/(.*)$",
       "authenticationType": "none",
-      "destination": "*",
+      "destination": "Northwind",
       "csrfProtection": false
+    },
+    {
+      "source": "^(.*)",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "service": "html5-apps-repo-rt"
     }
+   
   ]
 }

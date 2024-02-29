@@ -17,13 +17,13 @@
 		</tileContent>
 	</GenericTile>
 
-	<GenericTile id="_IDGenGenericTile2" header="Argentina" subheader="Buenos Aires">
+	<GenericTile id="_IDGenGenericTile2" header="Peru" subheader="Lima">
 		<tileContent>
 			<TileContent id="_IDGenTileContent2">
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart2" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="{/AddIntegerResult}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="{lima>/horaLima}"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
@@ -31,13 +31,13 @@
 		</tileContent>
 	</GenericTile>
 
-	<GenericTile id="_IDGenGenericTile3" header="Argentina" subheader="Buenos Aires">
+	<GenericTile id="_IDGenGenericTile3" header="EEUU" subheader="NY">
 		<tileContent>
 			<TileContent id="_IDGenTileContent3">
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart3" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3" fractionLabel="{/desc}" fraction="{/hora}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3"  fraction="{/horaNY}"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
