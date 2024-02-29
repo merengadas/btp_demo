@@ -16,6 +16,7 @@ sap.ui.define([
                 self.getInfoTile();
                 self.getInfoTileLima();
                 self.getInfoTileChicago();
+                self.getInfoTile2();
       
               },
               getInfoTile: function () {
@@ -42,7 +43,7 @@ sap.ui.define([
 
                     that.getView().setModel(that._oTileModel1);
 
-                    getInfoTileLima();
+                   // getInfoTileLima();
                   },
                   error: function (error) {
                     console.log("Tile: ", error);
@@ -74,7 +75,7 @@ sap.ui.define([
 
                     that.getView().setModel(that._oTileModel2, "lima");
                     
-                    getInfoTileChicago();
+                  //  getInfoTileChicago();
                     
                   },
                   error: function (error) {
@@ -107,7 +108,7 @@ sap.ui.define([
 
                     that.getView().setModel(that._oTileModel3, "Chicago");
                     
-                    getInfoTileChicago();
+                   // getInfoTileChicago();
                     
                   },
                   error: function (error) {
@@ -119,31 +120,28 @@ sap.ui.define([
 
               getInfoTile2: function () {
                 var that = this;
-                let path = this.getOwnerComponent().getManifestObject()._oBaseUri._parts.path;
-                console.log(path);
+                                
                 $.ajax({
                   type: "GET",
                   url: "v2/northwind/northwind.svc/Employees",
                   contentType:"text/xml; charset=\"utf-8\"",
                   dataType:"xml",
                   success: function (data) {
-                   
-                    debugger;
+                                      
                     var response = data;
-                    
                     var dataXml= data.responseText;
                     var parser = new DOMParser();
                     var xmlDoc=parser.parseFromString(dataXml, "text/xml");
 
-                    //responseTotal= xmlDoc.getElementsByTagName("AddIntegerResult")[0].childNodes[0].nodeValue;
-                  //  Messagebox.Show(responseTotal);
+                    let valor= xmlDoc.getElementsByTagName("AddIntegerResult")[0].childNodes[0].nodeValue;
+                    console.log(valor) ;
                     
 
-                   that._oTileModel2 = new sap.ui.model.xml.XMLModel();
-                   that._oTileModel2.setData(xmlDoc);  
+                   that._oTileModelSOAP = new sap.ui.model.xml.XMLModel();
+                   that._oTileModelSOAP.setData(xmlDoc);  
                    console.log(response);
                     
-                    that.getView().setModel(that._oTileModel2);
+                    that.getView().setModel(that._oTileModelSOAP,"SOAP");
 
                     
                   },
