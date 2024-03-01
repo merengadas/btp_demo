@@ -132,7 +132,7 @@ sap.ui.define([
                                 
                 $.ajax({
                   type: "POST",
-                  url: "xxx/webservicesserver/numberconversion.wso?op=NumberToWords",
+                  url: "webservicesserver/numberconversion.wso?op=NumberToWords",
                   data:sPayload,
                   contentType:"text/xml",
                   dataType:"xml",

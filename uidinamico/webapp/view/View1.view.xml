@@ -47,7 +47,19 @@
 
 	<GenericTile id="_IDGenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
 		<TileContent id="_IDGenTileContent4" unit="EUR" footer="Current Quarter">
-			<NumericContent id="_IDGenNumericContent1" scale="M" value="{SOAP>/valor}" valueColor="Error" indicator="Up" withMargin="false" />
+			<NumericContent id="_IDGenNumericContent4" scale="M" value="{SOAP>/valor}" valueColor="Error" indicator="Down" withMargin="false" />
+		</TileContent>
+	</GenericTile>
+
+		<GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
+		<TileContent id="_IDGenTileContent5" unit="EUR" footer="Current Quarter">
+			<NumericContent id="_IDGenNumericContent5" scale="M" value="{SOAP>/valor}" valueColor="Good" indicator="Up" withMargin="false" />
+		</TileContent>
+	</GenericTile>
+
+		<GenericTile id="_IDGenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
+		<TileContent id="_IDGenTileContent6" unit="EUR" footer="Current Quarter">
+			<NumericContent id="_IDGenNumericContent6" scale="M" value="{SOAP>/valor}" valueColor="Critical" indicator="Down" withMargin="false" />
 		</TileContent>
 	</GenericTile>
 
