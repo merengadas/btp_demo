@@ -1,7 +1,11 @@
 <mvc:View controllerName="com.sap.uidinamico.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:micro="sap.suite.ui.microchart"
-    xmlns="sap.m">
+	xmlns:mc="sap.suite.ui.microchart"	
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout"
+>
     <Page id="page" title="{i18n>title}">
        <GenericTile id="_IDGenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="Argentina" subheader="Buenos Aires">
 		<tileContent>
@@ -9,7 +13,7 @@
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart1" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem1"  fraction="{/hora}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem1"  fraction="11"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
@@ -23,7 +27,7 @@
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart2" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="{lima>/horaLima}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem2" fraction="5"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
@@ -37,7 +41,7 @@
 				<content>
 					<micro:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart3" showTotal="false" total="12" size="Responsive" totalScale="Hr">
 						<micro:items>
-							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3"  fraction="{Chicago>/horaChicago}"  color="Good" fractionScale="Hr"/>
+							<micro:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItem3"  fraction="7"  color="Good" fractionScale="Hr"/>
 						</micro:items>
 					</micro:HarveyBallMicroChart>
 				</content>
@@ -45,23 +49,73 @@
 		</tileContent>
 	</GenericTile>
 
-	<GenericTile id="_IDGenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
-		<TileContent id="_IDGenTileContent4" unit="EUR" footer="Current Quarter">
-			<NumericContent id="_IDGenNumericContent4" scale="M" value="{SOAP>/valor}" valueColor="Error" indicator="Down" withMargin="false" />
+	<GenericTile id="_IDGenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="GET" press="press">
+		<TileContent id="_IDGenTileContent4" unit="KPI" footer="Current Value">
+			<NumericContent id="_IDGenNumericContent4" scale="M" value="2" valueColor="Error" indicator="Down" withMargin="false" />
 		</TileContent>
 	</GenericTile>
 
-		<GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
-		<TileContent id="_IDGenTileContent5" unit="EUR" footer="Current Quarter">
-			<NumericContent id="_IDGenNumericContent5" scale="M" value="{SOAP>/valor}" valueColor="Good" indicator="Up" withMargin="false" />
+		<GenericTile id="_IDGenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP2" subheader="POST" press="press">
+		<TileContent id="_IDGenTileContent5" unit="KPI" footer="Current Value">
+			<NumericContent id="_IDGenNumericContent5" scale="M" value="5" valueColor="Good" indicator="Up" withMargin="false" />
 		</TileContent>
 	</GenericTile>
 
-		<GenericTile id="_IDGenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP1" subheader="Expenses" press="press">
-		<TileContent id="_IDGenTileContent6" unit="EUR" footer="Current Quarter">
-			<NumericContent id="_IDGenNumericContent6" scale="M" value="{SOAP>/valor}" valueColor="Critical" indicator="Down" withMargin="false" />
+	<GenericTile id="_IDGenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="SOAP3" subheader="SESCURE" press="press">
+		<TileContent id="_IDGenTileContent6" unit="KPI" footer="Current Value">
+			<NumericContent id="_IDGenNumericContent6" scale="M" value="7" valueColor="Critical" indicator="Down" withMargin="false" />
 		</TileContent>
 	</GenericTile>
+
+	<GenericTile id="_IDGenGenericTile7" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" size="L" header="Ejemplo" subheader="" press="press">
+			<TileContent id="_IDGenTileContent7" unit="" footer="">
+	
+	
+					<mc:LineMicroChart id="_IDGenLineMicroChart1" threshold="55" size="Responsive"
+								leftTopLabel="Sep 2017"
+								leftBottomLabel="120M"
+								rightTopLabel="Oct 2017"
+								rightBottomLabel="142M">
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint1" x="0" y="55" show="true"/>
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint2" x="10" y="30"/>
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint3" x="20" y="23"/>
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint4" x="30" y="45"/>
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint5" x="40" y="55"/>
+								<mc:LineMicroChartEmphasizedPoint id="_IDGenLineMicroChartEmphasizedPoint6" x="50" y="80" show="true" color="Good"/>
+							</mc:LineMicroChart>
+				</TileContent>
+	</GenericTile>
+
+	<GenericTile id="_IDGenGenericTile8" header="Comparison Chart" frameType="OneByOne" press="press" class="sapUiTinyMargin">
+						<TileContent id="_IDGenTileContent8">
+							<mc:ComparisonMicroChart id="_IDGenComparisonMicroChart1" scale="M">
+								<mc:data>
+									<mc:ComparisonMicroChartData id="_IDGenComparisonMicroChartData1" title="Americas" value="40" color="Error"/>
+									<mc:ComparisonMicroChartData id="_IDGenComparisonMicroChartData2" title="APAC" value="-10" color="Error"/>
+									<mc:ComparisonMicroChartData id="_IDGenComparisonMicroChartData3" title="EMEA" value="80" color="Error"/>
+								</mc:data>
+							</mc:ComparisonMicroChart>
+						</TileContent>
+					</GenericTile>
+				
+					<GenericTile id="_IDGenGenericTile10" header="Bullet Chart" frameType="OneByOne" press="press" class="sapUiTinyMargin">
+						<TileContent id="_IDGenTileContent10">
+							<mc:BulletMicroChart id="_IDGenBulletMicroChart1" scale="M" targetValue="100" forecastValue="110">
+								<mc:actual>
+									<mc:BulletMicroChartData id="_IDGenBulletMicroChartData1" value="130" color="Good"/>
+								</mc:actual>
+								<mc:thresholds>
+									<mc:BulletMicroChartData id="_IDGenBulletMicroChartData2" value="0" color="Error"/>
+									<mc:BulletMicroChartData id="_IDGenBulletMicroChartData3" value="50" color="Critical"/>
+									<mc:BulletMicroChartData id="_IDGenBulletMicroChartData4" value="150" color="Critical"/>
+									<mc:BulletMicroChartData id="_IDGenBulletMicroChartData5" value="200" color="Error"/>
+								</mc:thresholds>
+							</mc:BulletMicroChart>
+						</TileContent>
+					</GenericTile>
+
+
+					
 
 
     </Page>
